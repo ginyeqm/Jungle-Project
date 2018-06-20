@@ -26,6 +26,18 @@ main section.categories-show {
         margin: auto;
         display: block;
       }
+      .soldout {
+        background: red;
+        font-size: 14px;
+        color: white;
+        height: 30px;
+        padding-top:4px;
+        width:50%;
+        float:left;
+        text-align:center;
+
+
+      }
 
       footer {
         position: absolute;
