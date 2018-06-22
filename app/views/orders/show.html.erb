@@ -1,3 +1,9 @@
+<!-- Their image, name and description
+Their respective quantities and line item totals
+The final amount for the order
+The email that was used -->
+
+
 <section class="orders-show">
 
   <header class="page-header">
@@ -6,7 +12,43 @@
 
   <div class="order-summary jumbotron">
     <h4>Thank you for your order!</h4>
+    <h4>I sent you a confirmation email, <%=current_user.email%></h4>
   </div>
+
+  <div class="panel panel-default items">
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th colspan="2">Product</th>
+          <th>Unit Price</th>
+          <th>Quantity</th>
+          <th>Price</th>
+
+        </tr>
+      </thead>
+
+
+      <tbody>
+        <% @order_total = 0 %>
+        <% @order.line_items.each do |line_item,|%>
+          <%= render 'item', product_id: line_item.product_id, total_price: line_item.total_price_cents%>
+          <% @order_total += line_item.total_price_cents %>
+        <% end %>
+
+      </tbody>
+      <tfoot>
+        <tr>
+          <th colspan="4">
+            TOTAL:
+          </th>
+          <th>
+            <%= @order_total / 100 %>
+          </th>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+
 
   <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
 
