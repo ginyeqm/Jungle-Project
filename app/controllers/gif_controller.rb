@@ -7,5 +7,4 @@ class GifController < ApplicationController
 
   def free
   end
-
 end
