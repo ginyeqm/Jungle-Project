@@ -1,0 +1,8 @@
+
+<h1>Reivews</h1>
+<%= form_for :@review, url: '/products/:id' do |f| %>
+  description: <%= f.text_field :description %>
+  rating <%= f.select :rating options_for_select([1..5]) %>
+  <%= f.submit "Submit" %>
+<% end %>
+

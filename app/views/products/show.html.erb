@@ -22,9 +22,41 @@
           <dd><%= @product.quantity %></dd>
           <dt>Price</dt>
           <dd><%= @product.price %></dd>
+
         </dl>
       </div>
     </div>
+
+    <h2>Reviews </h2>
+    <h4>Overall Product Rating: <%= @product_rating %></h4><br>
+
+    <div class="row">
+
+      <% @product.reviews.reverse.each do |review| %>
+
+        <dl class="dl-horizontal">
+          <dt>User name</dt>
+          <dd><%= review.user.first_name%>  </dd>
+
+          <dt>Review:</dt>
+          <dd><%= review.description %></dd>
+
+          <dt>Rating:</dt>
+          <dd><%= review.rating %></dd>
+          <% if current_user %>
+          <%= link_to "Delete", product_review_path(product_id: @product.id, id: review.id), class: 'btn btn-sm btn-danger', method: :delete, data: { confirm: "Are you sure?" } %>
+          <%end%>
+        </dl>
+      <%end%>
+    </div>
+
+
+    <h2>Reivews</h2>
+      <%= form_for :review, url: product_reviews_path(product_id: @product.id)  do |f| %>
+        description: <%= f.text_field :description %>
+              rating <%= f.select :rating ,options_for_select([1,2,3,4,5]) %>
+                     <%= f.submit "Submit" %>
+    <% end %>
 
   </article>
 
