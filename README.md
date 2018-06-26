@@ -1,6 +1,14 @@
 # Jungle
 
-A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
+## Description
+Jungle is a mini e-commerce application built with Rails 4.2 for the purposes of online shopping. A simulation of the real world where feature and bug-fix requests are listed instead of step-by-step instructions on how to implement a solution
+
+## Final Product
+!["Screenshot of URLs login page"](https://github.com/ginyeqm/Jungle-Project/blob/master/doc/MainPage.png)]
+!["Screenshot of URLs login page"](https://github.com/ginyeqm/Jungle-Project/blob/master/doc/Product.png)
+!["Screenshot of URLs login page"](https://github.com/ginyeqm/Jungle-Project/blob/master/doc/MyCart.png)
+!["Screenshot of URLs login page"](https://github.com/ginyeqm/Jungle-Project/blob/master/doc/Stripe.png)
+!["Screenshot of URLs login page"](https://github.com/ginyeqm/Jungle-Project/blob/master/doc/OrderedPage.png)
 
 
 ## Setup
@@ -38,6 +46,4 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 * Spring
 * Stripe
 
-## Description
- Jungle is a mini e-commerce application built with Rails 4.2 for the purposes of online shopping. A simulation of the real world where feature and bug-fix requests are listed instead of step-by-step instructions on how to implement a solution
 
