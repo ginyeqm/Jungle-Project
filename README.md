@@ -24,5 +24,20 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 ## Dependencies
 
 * Rails 4.2 [Rails Guide](http://guides.rubyonrails.org/v4.2/)
+
 * PostgreSQL 9.x
+* Bcrypt
+* Bootstrap
+* Byebug
+* Capybara
+* Database_Cleaner
+* Faker
+* jQuery-Rails
+* RMagick
+* Sass
+* Spring
 * Stripe
+
+## Description
+ Jungle is a mini e-commerce application built with Rails 4.2 for the purposes of online shopping. A simulation of the real world where feature and bug-fix requests are listed instead of step-by-step instructions on how to implement a solution
+
